@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Bottle
 
-# Register your models here.
+class BottleAdmin(admin.ModelAdmin):
+    list_display = ['name', 'start_count', 'end_count']
+    pass
+admin.site.register(Bottle, BottleAdmin)

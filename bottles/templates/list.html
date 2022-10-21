@@ -3,6 +3,11 @@
 {% block title %} BBI Bottle Inventory {% endblock title %}
 
 {% block content %}
+    <ul>
+        {% for bottle in bottles %}
+            <li>{{ bottle.name }}</li>
+        {% endfor %}
+    </ul>
     <p>Test Top</p>
     <p>Test</p>
     <p>Test</p>
