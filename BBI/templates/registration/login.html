@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container justify-content-center text-center" id="login">
+        <h2>Log In</h2>
+        <form method="post">
+            <div class="container-sm">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <!-- <div class="form-floating mb-3">
+                    <input type="text" class="form-control" maxlength="150" id="username" placeholder="Username">
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <label for="password">Password</label>
+                </div> -->
+            </div>
+            <div class="controls">
+                <button type="submit">Log In</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
