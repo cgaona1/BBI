@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} BBI Edit Quantity {% endblock title %}
+
+{% block content %}
+    <br>
+    <h2 class="display-2">Edit Quantity for {{ bottle.name }}</h2>
+    <br>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="btn btn-primary" type="submit" value="Update" />
+        <a class="btn btn-secondary" href="{% url 'bottle_list' %}" role="button">Cancel</a>
+    </form>
+{% endblock content %}

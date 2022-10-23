@@ -136,5 +136,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = 'bottles_list'
-LOGOUT_REDIRECT_URL = 'bottles_list'
+LOGIN_REDIRECT_URL = 'bottle_list'
+LOGOUT_REDIRECT_URL = 'bottle_list'
