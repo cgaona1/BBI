@@ -37,7 +37,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'bottles.apps.BottlesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,6 +46,7 @@ INSTALLED_APPS = [
     'django_tables2',
     'users.apps.UsersConfig',
     'work_weeks.apps.WorkWeeksConfig',
+    'bottles.apps.BottlesConfig',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +65,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'BBI', 'templates'),
+            os.path.join(BASE_DIR, 'BBI' , 'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -137,5 +137,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = 'bottle_list'
-LOGOUT_REDIRECT_URL = 'bottle_list'
+LOGIN_REDIRECT_URL = 'work_week_list'
+LOGOUT_REDIRECT_URL = 'work_week_list'

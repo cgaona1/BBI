@@ -10,7 +10,7 @@ from .tables import BottleTable
 class BottlesListView(LoginRequiredMixin, SingleTableView):
     login_url = '/accounts/login/'
     model = Bottle
-    template_name = 'list.html'
+    template_name = 'bottles/list.html'
     table_class = BottleTable
 
 class BottleUpdateView(LoginRequiredMixin, UpdateView):
