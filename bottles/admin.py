@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Bottle
 
 class BottleAdmin(admin.ModelAdmin):
-    list_display = ['name', 'start_count', 'end_count', 'created_by', 'updated_by','created_at_mtc', 'updated_at_mtc']
+    list_display = ['name', 'created_by', 'updated_by','created_at_mtc', 'updated_at_mtc']
 
     def get_time(self, time):
             import pytz
@@ -18,3 +18,4 @@ class BottleAdmin(admin.ModelAdmin):
         return self.get_time(bottle.updated_at)
 
 admin.site.register(Bottle, BottleAdmin)
+
