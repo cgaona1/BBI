@@ -47,4 +47,4 @@ class WorkWeekDay(BaseModel):
         blank=True
     )
     def __str__(self):
-        return f'{self.work_week}, {self.day}'
+        return f'{self.day}'

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} BBI Bottle Inventory Week {% endblock title %}
+
+{% block content %}
+<br>
+<h2 class="display-2">{{ work_week_days }}</h2>
+<br>
+<ul>
+    {% for day in work_week_days %}
+    <li>{{ day }}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

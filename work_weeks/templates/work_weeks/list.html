@@ -6,4 +6,9 @@
     <br>
     <h2 class="display-2">Weeks</h2>
     <br>
+    <ul>
+        {% for week in work_weeks %}
+            <li><a href="{% url 'work_week_day_list' week.pk %}">{{ week }}</a></li>
+        {% endfor %}
+    </ul>
 {% endblock content %}
